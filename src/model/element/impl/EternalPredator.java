@@ -24,6 +24,7 @@ public class EternalPredator extends SimpleElement {
 	
 	static {
 		consumes.add(ElementType.HERBIVOROUS); // eats herbivorous animals
+		consumes.add(ElementType.BIRD);
 		consumes.add(ElementType.PREDATOR); // eats predators
 		actions.add(Actions.eat());
 		actions.add(Actions.move());

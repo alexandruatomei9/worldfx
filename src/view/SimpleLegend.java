@@ -9,16 +9,14 @@ import model.behavior.SimpleView;
 import model.behavior.View;
 import model.element.Element;
 import model.element.ElementType;
-import model.element.impl.EternalPredator;
-import model.element.impl.Herbivorous;
-import model.element.impl.Plant;
-import model.element.impl.Predator;
+import model.element.impl.*;
 import util.Util;
 
 public class SimpleLegend implements Legend {
    	
 	private static int MIN_SIMPLE_CREATURE_LIFE = 5;
-	private static int MAX_SIMPLE_CREATURE_LIFE = 25;	
+	private static int MAX_SIMPLE_CREATURE_LIFE = 25;
+	private static int BIRD_LIFE = 15;
 	private static int SIMPLE_CREATURE_TICK = 300;
 	private static int PLANT_TICK = 1000;
 	private static int MIN_PLANT_LIFE = 10;
@@ -60,6 +58,8 @@ public class SimpleLegend implements Legend {
 				e = new Herbivorous(Util.randomInRange(MIN_SIMPLE_CREATURE_LIFE, MAX_SIMPLE_CREATURE_LIFE), 
 						VIEW, SIMPLE_CREATURE_TICK, ACTION_CHOOSER, ACTION_VALIDATOR);
 				break;
+			case BIRD:
+				e = new Bird(BIRD_LIFE, VIEW, SIMPLE_CREATURE_TICK, ACTION_CHOOSER, ACTION_VALIDATOR);
 		}
 		if(e == null) {
 			throw new IllegalArgumentException("UnknownElement:" + elementType);
