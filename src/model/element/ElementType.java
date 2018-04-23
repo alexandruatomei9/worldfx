@@ -6,19 +6,25 @@ package model.element;
  *
  */
 public enum ElementType {
-			
-	SPACE(" "), WALL("#"), HERBIVOROUS("o"), PREDATOR("*"), SUPER_PREDATOR("@"), PLANT("~"), BIRD("p");
-	
+	SPACE(" "),
+	WALL("#"),
+	HERBIVOROUS("o"),
+	PREDATOR("*"),
+	SUPER_PREDATOR("@"),
+	PLANT("~"),
+	BIRD("p"),
+	HORSE("h");
+
 	private final String element;
-	
-	private ElementType(String s) {
+
+	ElementType(String s) {
 		this.element = s;
 	}
 
 	public String getElement() {
 		return element;
 	}
-	
+
 	public static ElementType of(String type) {
 		for(ElementType elementType : ElementType.values()) {
 			if(elementType.getElement().equals(type)) {

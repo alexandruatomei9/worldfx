@@ -22,6 +22,7 @@ public class SimpleImageLoader implements ImageLoader {
         loadImage(ElementType.PREDATOR, "res/predator2.jpg");
         loadImage(ElementType.SUPER_PREDATOR, "res/superpred1.jpg");
         loadImage(ElementType.BIRD, "res/bird.jpg");
+        loadImage(ElementType.HORSE, "res/horse.jpg");
     }
 
     private void loadImage(ElementType type, String path) throws IOException {

@@ -60,6 +60,10 @@ public class SimpleLegend implements Legend {
 				break;
 			case BIRD:
 				e = new Bird(BIRD_LIFE, VIEW, SIMPLE_CREATURE_TICK, ACTION_CHOOSER, ACTION_VALIDATOR);
+				break;
+			case HORSE:
+				e = new Horse(MAX_SIMPLE_CREATURE_LIFE, VIEW, SIMPLE_CREATURE_TICK, ACTION_CHOOSER, ACTION_VALIDATOR);
+				break;
 		}
 		if(e == null) {
 			throw new IllegalArgumentException("UnknownElement:" + elementType);
