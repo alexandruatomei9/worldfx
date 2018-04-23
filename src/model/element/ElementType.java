@@ -7,7 +7,7 @@ package model.element;
  */
 public enum ElementType {
 			
-	SPACE(" "), WALL("#"), HERBIVOROUS("o"), PREDATOR("*"), SUPER_PREDATOR("@"), PLANT("~");
+	SPACE(" "), WALL("#"), HERBIVOROUS("o"), PREDATOR("*"), SUPER_PREDATOR("@"), PLANT("~"), BIRD("a");
 	
 	private final String element;
 	
