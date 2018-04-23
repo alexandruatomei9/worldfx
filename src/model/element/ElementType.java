@@ -2,8 +2,8 @@ package model.element;
 
 /**
  * Defines an element type along with it's associated character
- * @author Softvision
  *
+ * @author Softvision
  */
 public enum ElementType {
 	SPACE(" "),
@@ -21,16 +21,16 @@ public enum ElementType {
 		this.element = s;
 	}
 
-	public String getElement() {
-		return element;
-	}
-
 	public static ElementType of(String type) {
-		for(ElementType elementType : ElementType.values()) {
-			if(elementType.getElement().equals(type)) {
+		for (ElementType elementType : ElementType.values()) {
+			if (elementType.getElement().equals(type)) {
 				return elementType;
 			}
 		}
 		throw new IllegalArgumentException("Invalid character:" + type);
+	}
+
+	public String getElement() {
+		return element;
 	}
 }

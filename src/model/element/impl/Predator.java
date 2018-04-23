@@ -1,8 +1,5 @@
 package model.element.impl;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import model.action.Action;
 import model.action.Actions;
 import model.behavior.ActionChooser;
@@ -11,11 +8,14 @@ import model.behavior.View;
 import model.element.ElementType;
 import model.element.SimpleElement;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Predator extends SimpleElement {
-	
+
 	private static final Set<ElementType> consumes = new HashSet<>();
 	private static final Set<Action> actions = new HashSet<>();
-	
+
 	static {
 		consumes.add(ElementType.HERBIVOROUS); // eats herbivorous animals
 		consumes.add(ElementType.BIRD);
@@ -26,11 +26,11 @@ public class Predator extends SimpleElement {
 	}
 
 	public Predator(int life, View view, int tick, ActionChooser chooser, ActionValidator validator) {
-		super(life, view, tick, chooser, validator);		
+		super(life, view, tick, chooser, validator);
 	}
 
 	@Override
-	public ElementType getElementType() {		
+	public ElementType getElementType() {
 		return ElementType.PREDATOR;
 	}
 
@@ -40,7 +40,7 @@ public class Predator extends SimpleElement {
 	}
 
 	@Override
-	public Set<ElementType> consumes() {		
+	public Set<ElementType> consumes() {
 		return consumes;
 	}
 }

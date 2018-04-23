@@ -1,12 +1,13 @@
 package model.action;
 
+import model.element.ActionableElementType;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import model.element.ActionableElementType;
-
 public class Actions {
-	private static final Map<ActionType, Action> ALL_ACTIONS= new HashMap<>();
+	private static final Map<ActionType, Action> ALL_ACTIONS = new HashMap<>();
+
 	static {
 		ALL_ACTIONS.put(ActionType.MOVE, new Action(ActionType.MOVE, ActionableElementType.SPACE));
 		ALL_ACTIONS.put(ActionType.PAUSE, new Action(ActionType.PAUSE, ActionableElementType.NONE));
@@ -14,11 +15,11 @@ public class Actions {
 		ALL_ACTIONS.put(ActionType.REPRODUCE, new Action(ActionType.REPRODUCE, ActionableElementType.SAME));
 		ALL_ACTIONS.put(ActionType.REPRODUCE_COPY, new Action(ActionType.REPRODUCE_COPY, ActionableElementType.SPACE));
 	}
-	
+
 	public static Action move() {
 		return ALL_ACTIONS.get(ActionType.MOVE);
 	}
-	
+
 	public static Action pause() {
 		return ALL_ACTIONS.get(ActionType.PAUSE);
 	}

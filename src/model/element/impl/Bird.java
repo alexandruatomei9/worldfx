@@ -12,33 +12,33 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Bird extends SimpleElement {
-    private static final Set<ElementType> consumes = new HashSet<>();
-    private static final Set<Action> actions = new HashSet<>();
+	private static final Set<ElementType> consumes = new HashSet<>();
+	private static final Set<Action> actions = new HashSet<>();
 
-    static {
-        consumes.add(ElementType.PLANT); // eats plants
-        actions.add(Actions.eat());
-        actions.add(Actions.move());
-        actions.add(Actions.reproduce_copy());
-        actions.addAll(defaultActions());
-    }
+	static {
+		consumes.add(ElementType.PLANT); // eats plants
+		actions.add(Actions.eat());
+		actions.add(Actions.move());
+		actions.add(Actions.reproduce_copy());
+		actions.addAll(defaultActions());
+	}
 
-    public Bird(int life, View view, int tick, ActionChooser chooser, ActionValidator validator) {
-        super(life, view, tick, chooser, validator);
-    }
+	public Bird(int life, View view, int tick, ActionChooser chooser, ActionValidator validator) {
+		super(life, view, tick, chooser, validator);
+	}
 
-    @Override
-    public ElementType getElementType() {
-        return ElementType.BIRD;
-    }
+	@Override
+	public ElementType getElementType() {
+		return ElementType.BIRD;
+	}
 
-    @Override
-    public Set<ElementType> consumes() {
-        return consumes;
-    }
+	@Override
+	public Set<ElementType> consumes() {
+		return consumes;
+	}
 
-    @Override
-    public Set<Action> possibleActions() {
-        return actions;
-    }
+	@Override
+	public Set<Action> possibleActions() {
+		return actions;
+	}
 }
