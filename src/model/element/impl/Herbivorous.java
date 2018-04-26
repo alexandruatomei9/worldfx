@@ -13,8 +13,8 @@ import java.util.Set;
 
 public class Herbivorous extends SimpleElement {
 
-	private static final Set<ElementType> consumes = new HashSet<>();
-	private static final Set<Action> actions = new HashSet<>();
+	public static final Set<ElementType> consumes = new HashSet<>();
+	public static final Set<Action> actions = new HashSet<>();
 
 	static {
 		consumes.add(ElementType.PLANT); // eats plants

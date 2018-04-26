@@ -64,9 +64,9 @@ public class WorldFX extends Application implements Runnable, WorldView {
 				"#    #     o         ~~~  o                    #",
 				"#  o  #     o       ~~~             *          #",
 				"# #  # ~~~     o       ##       ~~~            #",
-				"# #  #         o       ##       ~~~            #",
+				"# #  #         o  h    ##       ~~~            #",
 				"# #  # ~~~     o       ##                      #",
-				"#p#  #         *   h   ##       ~~~            #",
+				"#p#  #         *      h##       ~~~            #",
 				"################################################"};
 
 //		String[] plan1 = {

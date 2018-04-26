@@ -3,17 +3,17 @@ package model.element;
 import model.action.Action;
 import model.action.Actions;
 import util.Util;
+import view.Direction;
+import view.StandardDirections;
 import view.Vector;
 import view.WorldView;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 public abstract class AbstractElement implements Element {
 
 	private static final Set<Action> defaultActions = new HashSet<>();
+	protected static final List<Direction> defaultDirections = Arrays.asList(StandardDirections.defaultDirections());
 
 	static {
 		defaultActions.add(Actions.pause());
@@ -131,5 +131,10 @@ public abstract class AbstractElement implements Element {
 	@Override
 	public String toString() {
 		return "Element " + getElementType() + " {" + getPosition() + "}";
+	}
+
+	@Override
+	public List<Direction> possibleDirections(ElementType element) {
+		return defaultDirections;
 	}
 }

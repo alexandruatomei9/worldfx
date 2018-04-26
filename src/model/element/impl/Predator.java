@@ -19,6 +19,7 @@ public class Predator extends SimpleElement {
 	static {
 		consumes.add(ElementType.HERBIVOROUS); // eats herbivorous animals
 		consumes.add(ElementType.BIRD);
+		consumes.add(ElementType.HORSE);
 		actions.add(Actions.eat());
 		actions.add(Actions.move());
 		actions.add(Actions.reproduce());
