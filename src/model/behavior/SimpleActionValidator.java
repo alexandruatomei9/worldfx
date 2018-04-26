@@ -32,7 +32,7 @@ public class SimpleActionValidator implements ActionValidator {
 							.getPosition()
 							.plus(actionDirection.get().toVector()));
 			double actualLife = element.getWorld().getManager().getLife(partner);
-			double perc = 0d;
+			double perc;
 			if (partner.getLife() == 0) {
 				perc = 100d;
 			} else {

@@ -15,7 +15,7 @@ import java.util.UUID;
  */
 public abstract class AbstractElementManager implements ElementManager {
 
-	private Map<UUID, ElementTraits> elements;
+	private final Map<UUID, ElementTraits> elements;
 
 	protected AbstractElementManager() {
 		elements = new HashMap<>();

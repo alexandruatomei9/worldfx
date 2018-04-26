@@ -6,7 +6,7 @@ import model.element.ElementType;
 
 public interface ImageLoader {
 
-	public Image load(ElementType e);
+	Image load(ElementType e);
 
-	public Image load(Element e);
+	Image load(Element e);
 }

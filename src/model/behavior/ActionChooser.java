@@ -9,5 +9,5 @@ import model.element.Element;
  * @author Softvision
  */
 public interface ActionChooser {
-	public Action chooseNextAction(Element element);
+	Action chooseNextAction(Element element);
 }

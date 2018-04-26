@@ -25,8 +25,8 @@ public abstract class SimpleElement extends AbstractElement implements Runnable 
 	private final int tick;
 	private final ActionChooser chooser;
 	private final ActionValidator validator;
-	private Thread t;
-	private View view;
+	private final Thread t;
+	private final View view;
 	private Action lastAction;
 	private int reproductionCount;
 
@@ -98,11 +98,11 @@ public abstract class SimpleElement extends AbstractElement implements Runnable 
 		return reproductionCount;
 	}
 
-	private final int getTick() {
+	private int getTick() {
 		return tick;
 	}
 
-	private final void incrementReproductionCount() {
+	private void incrementReproductionCount() {
 		reproductionCount++;
 	}
 }

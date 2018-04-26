@@ -10,27 +10,27 @@ import java.util.Set;
 import java.util.UUID;
 
 public interface Element {
-	public ElementType getElementType();
+	ElementType getElementType();
 
-	public void init(WorldView world, Vector pos);
+	void init(WorldView world, Vector pos);
 
-	public Vector getPosition();
+	Vector getPosition();
 
-	public void setPosition(Vector vector);
+	void setPosition(Vector vector);
 
-	public UUID getId();
+	UUID getId();
 
-	public Set<ElementType> consumes();
+	Set<ElementType> consumes();
 
-	public WorldView getWorld();
+	WorldView getWorld();
 
-	public boolean isEternal();
+	boolean isEternal();
 
-	public int getLife();
+	int getLife();
 
 	Set<Action> possibleActions();
 
-	public Action getLastAction();
+	Action getLastAction();
 
 	List<Direction> possibleDirections(ElementType element);
 }

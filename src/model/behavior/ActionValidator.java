@@ -12,7 +12,7 @@ import java.util.Optional;
  * @author Softvision
  */
 public interface ActionValidator {
-	public Optional<Direction> validateAction(Action action,
-											  SimpleElement element,
-											  Optional<Direction> actionDirection);
+	Optional<Direction> validateAction(Action action,
+									   SimpleElement element,
+									   Optional<Direction> actionDirection);
 }

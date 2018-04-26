@@ -10,5 +10,5 @@ public enum ActionType {
 	PAUSE,
 	EAT,
 	REPRODUCE, // defines a reproduce behavior that requires two individuals of the same type
-	REPRODUCE_COPY; // defines a reproduce behavior that requires only one individual  
+	REPRODUCE_COPY // defines a reproduce behavior that requires only one individual
 }

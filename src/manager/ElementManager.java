@@ -14,14 +14,14 @@ public interface ElementManager {
 	 *
 	 * @param element
 	 */
-	public void decrementLife(Element element);
+	void decrementLife(Element element);
 
 	/**
 	 * Increments the life of an {@link Element}
 	 *
 	 * @param element
 	 */
-	public void incrementLife(Element element);
+	void incrementLife(Element element);
 
 	/**
 	 * Augments the life of an {@link Element} by the specified quantity
@@ -29,7 +29,7 @@ public interface ElementManager {
 	 * @param element
 	 * @param quantity
 	 */
-	public void augmentLifeBy(Element element, int quantity);
+	void augmentLifeBy(Element element, int quantity);
 
 	/**
 	 * Reduces the life of an {@link Element} by the specified quantity
@@ -37,28 +37,28 @@ public interface ElementManager {
 	 * @param element
 	 * @param quantity
 	 */
-	public void reduceLifeBy(Element element, int quantity);
+	void reduceLifeBy(Element element, int quantity);
 
 	/**
 	 * Checks if an {@link Element} is still alive
 	 *
 	 * @param element
 	 */
-	public boolean isAlive(Element element);
+	boolean isAlive(Element element);
 
 	/**
 	 * Adds an {@link Element} to the list of managed elements
 	 *
 	 * @param element
 	 */
-	public void add(Element element);
+	void add(Element element);
 
 	/**
 	 * Removes an {@link Element} from the list of managed elements
 	 *
 	 * @param element
 	 */
-	public void remove(Element element);
+	void remove(Element element);
 
 	/**
 	 * Checks wheter an {@link Element} is managed
@@ -66,7 +66,7 @@ public interface ElementManager {
 	 * @param element
 	 * @return
 	 */
-	public boolean isManaged(Element element);
+	boolean isManaged(Element element);
 
 	/**
 	 * Gets the remaining life of an {@link Element}
@@ -74,7 +74,7 @@ public interface ElementManager {
 	 * @param element
 	 * @return
 	 */
-	public int getLife(Element element);
+	int getLife(Element element);
 
 	/**
 	 * Creates a space {@link Element}. What a space is exactly depends on the concrete implementation,
@@ -82,7 +82,7 @@ public interface ElementManager {
 	 *
 	 * @return A space {@link Element}
 	 */
-	public Element space();
+	Element space();
 
 	/**
 	 * Creates a wall {@link Element}. What a wall is exactly depends on the concrete implementation,
@@ -90,7 +90,7 @@ public interface ElementManager {
 	 *
 	 * @return A wall {@link Element}
 	 */
-	public Element wall();
+	Element wall();
 
 	/**
 	 * Returns the sum of all elements (except the walls) of the world to which this {@link Element} belongs.
@@ -98,7 +98,7 @@ public interface ElementManager {
 	 * @param element
 	 * @return capacity of the world to which {@link Element} belongs to
 	 */
-	public int getWorldCapacityBy(Element element);
+	int getWorldCapacityBy(Element element);
 
 	/**
 	 * Returns the number of elements of the same kind as the given {@link Element}.
@@ -106,5 +106,5 @@ public interface ElementManager {
 	 * @param element
 	 * @return
 	 */
-	public int populationCount(Element element);
+	int populationCount(Element element);
 }

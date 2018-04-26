@@ -11,11 +11,11 @@ public class Util {
 
 	private static final Object lockObject = new Object();
 
-	public static final Object lockOn() {
+	public static Object lockOn() {
 		return lockObject;
 	}
 
-	public static final UUID generateRandomUUID() {
+	public static UUID generateRandomUUID() {
 		return UUID.randomUUID();
 	}
 

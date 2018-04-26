@@ -47,7 +47,7 @@ public final class Action {
 
 	/**
 	 * manager.isAlive() is not called from synchronized context
-	 * so we must check again to prevent the case where the manager has remmoved the element
+	 * so we must check again to prevent the case where the manager has removed the element
 	 * after the thread has verified manager.isAlive()
 	 */
 	private boolean isStillAlive(WorldView world, Element element) {

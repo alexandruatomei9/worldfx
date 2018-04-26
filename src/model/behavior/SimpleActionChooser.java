@@ -11,7 +11,7 @@ public class SimpleActionChooser implements ActionChooser {
 	@Override
 	public Action chooseNextAction(Element element) {
 		double actualLife = element.getWorld().getManager().getLife(element);
-		double perc = 0d;
+		double perc;
 		List<Action> possibleActions = new ArrayList<>();
 		if (element.getLife() == 0) {
 			perc = 100d;
@@ -40,12 +40,7 @@ public class SimpleActionChooser implements ActionChooser {
 		}
 
 		Set<Action> definedPossibleActions = element.possibleActions();
-		Iterator<Action> iterator = possibleActions.iterator();
-		while (iterator.hasNext()) {
-			if (!definedPossibleActions.contains(iterator.next())) {
-				iterator.remove();
-			}
-		}
+		possibleActions.removeIf(action -> !definedPossibleActions.contains(action));
 		if (possibleActions.isEmpty()) {
 			return Actions.pause();
 		}

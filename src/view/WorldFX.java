@@ -2,13 +2,11 @@ package view;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import manager.DefaultElementManager;
 import manager.ElementManager;
 import model.element.Element;
@@ -37,7 +35,7 @@ public class WorldFX extends Application implements Runnable, WorldView {
 		this.t = new Thread(this);
 	}
 
-	public static void main(String... args) throws Exception {
+	public static void main(String... args) {
 		Application.launch(args);
 	}
 
@@ -117,12 +115,9 @@ public class WorldFX extends Application implements Runnable, WorldView {
 		root.getChildren().add(canvas);
 		primaryStage.setScene(new Scene(root));
 
-		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-			@Override
-			public void handle(WindowEvent t) {
-				Platform.exit();
-				System.exit(0);
-			}
+		primaryStage.setOnCloseRequest(t -> {
+			Platform.exit();
+			System.exit(0);
 		});
 
 		primaryStage.show();
@@ -227,7 +222,7 @@ public class WorldFX extends Application implements Runnable, WorldView {
 		return sb.toString();
 	}
 
-	private void drawShapes(GraphicsContext gc) throws Exception {
+	private void drawShapes(GraphicsContext gc) {
 		for (int i = 0; i < grid.getHeight(); i++) {
 			for (int k = 0; k < grid.getWidth(); k++) {
 				gc.drawImage(loader.load(grid.getGridContent(new Vector(k, i)).getElementType()),
@@ -278,15 +273,11 @@ public class WorldFX extends Application implements Runnable, WorldView {
 		/**
 		 * without delegating to the FX thread we will likely end up in a deadlock situation
 		 */
-		Platform.runLater(new Runnable() {
-			public void run() {
-				canvas.getGraphicsContext2D().drawImage(loader.load(e.getElementType()),
-						k * eWidth,
-						i * eHeight,
-						eWidth,
-						eHeight);
-			}
-		});
+		Platform.runLater(() -> canvas.getGraphicsContext2D().drawImage(loader.load(e.getElementType()),
+				k * eWidth,
+				i * eHeight,
+				eWidth,
+				eHeight));
 
 	}
 }
