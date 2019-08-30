@@ -1,8 +1,5 @@
 package model.element.impl;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import model.action.Action;
 import model.action.Actions;
 import model.behavior.ActionChooser;
@@ -11,11 +8,14 @@ import model.behavior.View;
 import model.element.ElementType;
 import model.element.SimpleElement;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Plant extends SimpleElement {
-	
+
 	private static final Set<Action> actions = new HashSet<>();
-	
-	static {				
+
+	static {
 		actions.add(Actions.reproduce_copy());
 		actions.addAll(defaultActions());
 	}

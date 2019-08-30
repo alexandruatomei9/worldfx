@@ -8,9 +8,9 @@ public class Space extends AbstractElement {
 	public Space() {
 		super(true);
 	}
-	
+
 	@Override
-	public ElementType getElementType() {		
+	public ElementType getElementType() {
 		return ElementType.SPACE;
-	}	
+	}
 }

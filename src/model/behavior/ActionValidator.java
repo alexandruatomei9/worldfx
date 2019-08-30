@@ -1,18 +1,18 @@
 package model.behavior;
 
-import java.util.Optional;
-
 import model.action.Action;
 import model.element.SimpleElement;
 import view.Direction;
 
+import java.util.Optional;
+
 /**
  * Validates a given {@link Action}
- * @author Softvision
  *
+ * @author Softvision
  */
 public interface ActionValidator {
-	public Optional<Direction> validateAction(Action action, 
-				SimpleElement element, 
-				Optional<Direction> actionDirection);
+	Optional<Direction> validateAction(Action action,
+									   SimpleElement element,
+									   Optional<Direction> actionDirection);
 }
